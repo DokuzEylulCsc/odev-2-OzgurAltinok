@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OBS
+{
+    public class Fakulte
+    {
+        List<Bolum> bolumler;
+
+        public List<Bolum> Bolumler { get => bolumler; set => bolumler = value; }
+    }
+}
