@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("OBS")]
+[assembly: AssemblyTitle("OgrenciBilgiSistemi")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("OBS")]
+[assembly: AssemblyProduct("OgrenciBilgiSistemi")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a8ed03e5-06c3-4691-b973-259bb709b87e")]
+[assembly: Guid("e470d656-ff91-4ffc-a099-ea32f0a8eaf5")]
 
 // Version information for an assembly consists of the following four values:
 //

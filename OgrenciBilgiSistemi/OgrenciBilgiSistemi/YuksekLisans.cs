@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OBS
+namespace OgrenciBilgiSistemi
 {
-    public abstract class Ogrenci
+    public class YuksekLisans:Ogrenci
     {
 
     }

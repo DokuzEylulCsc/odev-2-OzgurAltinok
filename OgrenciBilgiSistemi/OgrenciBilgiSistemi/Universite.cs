@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OBS
+namespace OgrenciBilgiSistemi
 {
     public class Universite
     {
-        List<Fakulte> fakulteler;
+        IList<Fakulte> fakulteler;
 
-        public List<Fakulte> Fakulteler { get => fakulteler; set => fakulteler = value; }
+        public IList<Fakulte> Fakulteler { get => fakulteler; set => fakulteler = value; }
     }
 }

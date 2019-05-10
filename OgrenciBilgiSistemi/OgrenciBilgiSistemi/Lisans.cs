@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OBS
+namespace OgrenciBilgiSistemi
 {
-    public class YuksekLisans:Ogrenci
+    public class Lisans : Ogrenci
     {
+
     }
 }
