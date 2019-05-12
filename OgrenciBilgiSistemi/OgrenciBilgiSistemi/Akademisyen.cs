@@ -6,18 +6,14 @@ using System.Threading.Tasks;
 
 namespace OgrenciBilgiSistemi
 {
-    abstract class Ogrenci
+    internal abstract class Akademisyen
     {
         private string isim;
         private string soyIsim;
-        private string ogrBolum;
-        private int sinif;
-        private char sube;
+        private string brans;
 
         public string Isim { get => isim; set => isim = value; }
         public string SoyIsim { get => soyIsim; set => soyIsim = value; }
-        public string OgrBolum { get => ogrBolum; set => ogrBolum = value; }
-        public int Sinif { get => sinif; set => sinif = value; }
-        public char Sube { get => sube; set => sube = value; }
+        public string Brans { get => brans; set => brans = value; }
     }
 }

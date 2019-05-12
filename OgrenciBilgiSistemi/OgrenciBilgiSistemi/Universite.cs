@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace OgrenciBilgiSistemi
 {
-    public class Universite
+    class Universite
     {
-        IList<Fakulte> fakulteler;
+        private List<Fakulte> fakulteler = new List<Fakulte>();
 
-        public IList<Fakulte> Fakulteler { get => fakulteler; set => fakulteler = value; }
+        public List<Fakulte> Fakulteler { get => fakulteler; set => fakulteler = value; }
+
+        public void FakulteEkle(Fakulte fakulte)
+        {
+            Fakulteler.Add(fakulte);
+        }
+
     }
 }

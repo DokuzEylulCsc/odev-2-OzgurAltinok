@@ -10,6 +10,9 @@ namespace OgrenciBilgiSistemi
     {
         static void Main(string[] args)
         {
+            Ders d = new Ders();
+            
+            Console.ReadKey();
         }
     }
 }

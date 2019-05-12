@@ -8,29 +8,35 @@ namespace OgrenciBilgiSistemi
 {
     public class Ders
     {
-        List<Ogrenci> ogrenciler;
+        private List<Ogrenci> ogrenciler = new List<Ogrenci>();
+        private OgretimElemani ogretimElemani = new OgretimElemani();
+        private Asistan asistanHoca = new Asistan();
+        private string dersDonemi;
 
-        public List<Ogrenci> Ogrenciler { get => ogrenciler; set => ogrenciler = value; }
+        internal List<Ogrenci> Ogrenciler { get => ogrenciler; set => ogrenciler = value; }
+        internal OgretimElemani OgretimElemani { get => ogretimElemani; set => ogretimElemani = value; }
+        internal Asistan AsistanHoca { get => asistanHoca; set => asistanHoca = value; }
+        public string DersDonemi { get => dersDonemi; set => dersDonemi = value; }
 
-        //Belirli bir derse hoca ata
-        public void OgretimElemaniAta()
+        internal void OgretimElemaniAta(OgretimElemani hoca)
         {
-
+            OgretimElemani = hoca;
         }
 
-        public void OgretimElemaniGuncelle()
+        internal void OgretimElemaniGuncelle(OgretimElemani hoca)
         {
-
+            //serialize-deserialize kullanabilirsin.(JSON)
+            OgretimElemani = hoca;
         }
 
-        public void OgrenciEkle()
+        internal void OgrenciEkle(Ogrenci ogrenci)
         {
-
+            Ogrenciler.Add(ogrenci);
         }
 
-        public void OgrenciSil()
+        internal void OgrenciSil(Ogrenci ogrenci)
         {
-
+            Ogrenciler.Remove(ogrenci);
         }
     }
 }

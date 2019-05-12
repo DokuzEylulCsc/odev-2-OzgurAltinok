@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace OgrenciBilgiSistemi
 {
-    class Sube : Ders
+    internal class LisansOgrenci : Ogrenci
     {
-        private char subeBilgisi;
-
-        public char SubeBilgisi { get => subeBilgisi; set => subeBilgisi = value; }
+        public LisansOgrenci(string isim)
+        {
+            Isim = isim;
+        }
     }
 }

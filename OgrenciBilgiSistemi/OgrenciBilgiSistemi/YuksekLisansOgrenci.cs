@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace OgrenciBilgiSistemi
 {
-    class Sube : Ders
+    internal class YuksekLisansOgrenci : Ogrenci
     {
-        private char subeBilgisi;
 
-        public char SubeBilgisi { get => subeBilgisi; set => subeBilgisi = value; }
     }
 }
