@@ -10,8 +10,22 @@ namespace OgrenciBilgiSistemi
     {
         static void Main(string[] args)
         {
-            Ders d = new Ders();
-            
+            Ders ders = new Ders("yapay zeka", "2016-2017");
+
+            OgretimElemani hoca = new OgretimElemani();
+            OgretimElemani hoca2 = new OgretimElemani();
+            hoca.Isim = "mahmut";
+            hoca2.Isim = "elif";
+
+            ders.OgretimElemaniAta(hoca);
+            ders.OgretimElemaniGuncelle(hoca2);
+
+            LisansOgrenci ogrenci = new LisansOgrenci("mehmet");
+            ders.OgrenciEkle(ogrenci);
+            ders.OgrenciEkle(new DoktoraOgrenci("isil"));
+
+            ders.JsonKaydet();
+
             Console.ReadKey();
         }
     }

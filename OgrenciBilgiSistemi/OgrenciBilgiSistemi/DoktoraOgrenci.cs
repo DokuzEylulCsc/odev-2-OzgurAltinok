@@ -8,6 +8,10 @@ namespace OgrenciBilgiSistemi
 {
     internal class DoktoraOgrenci : Ogrenci
     {
-
+        internal DoktoraOgrenci(string isim)
+        {
+            Isim = isim;
+            OgrenimSeviyesi = this.GetType().Name;
+        }
     }
 }

@@ -8,11 +8,11 @@ namespace OgrenciBilgiSistemi
 {
     class Universite
     {
-        private List<Fakulte> fakulteler = new List<Fakulte>();
+        List<Fakulte> fakulteler = new List<Fakulte>();
 
         public List<Fakulte> Fakulteler { get => fakulteler; set => fakulteler = value; }
 
-        public void FakulteEkle(Fakulte fakulte)
+        internal void FakulteEkle(Fakulte fakulte)
         {
             Fakulteler.Add(fakulte);
         }

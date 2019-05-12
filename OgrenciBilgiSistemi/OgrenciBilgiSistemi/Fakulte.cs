@@ -9,10 +9,10 @@ namespace OgrenciBilgiSistemi
     class Fakulte
     {
         string isim;
-        private List<Ders> dersler = new List<Ders>();
-        private List<Sube> subeler = new List<Sube>();
-        private List<Ogrenci> ogrenciler = new List<Ogrenci>();
-        private List<Bolum> bolumler = new List<Bolum>();
+        List<Ders> dersler = new List<Ders>();
+        List<Sube> subeler = new List<Sube>();
+        List<Ogrenci> ogrenciler = new List<Ogrenci>();
+        List<Bolum> bolumler = new List<Bolum>();
         
         public string Isim { get => isim; set => isim = value; }
         public List<Ders> Dersler { get => dersler; set => dersler = value; }
@@ -20,12 +20,12 @@ namespace OgrenciBilgiSistemi
         public List<Ogrenci> Ogrenciler { get => ogrenciler; set => ogrenciler = value; }
         public List<Bolum> Bolumler { get => bolumler; set => bolumler = value; }
 
-        public Fakulte(string fakulteIsim)
+        internal Fakulte(string fakulteIsim)
         {
             Isim = fakulteIsim;
         }
 
-        public void BolumEkle(Bolum bolum)
+        internal void BolumEkle(Bolum bolum)
         {
             Bolumler.Add(bolum);
         }

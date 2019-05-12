@@ -8,6 +8,10 @@ namespace OgrenciBilgiSistemi
 {
     internal class YuksekLisansOgrenci : Ogrenci
     {
-
+        internal YuksekLisansOgrenci(string isim)
+        {
+            Isim = isim;
+            OgrenimSeviyesi = this.GetType().Name;
+        }
     }
 }

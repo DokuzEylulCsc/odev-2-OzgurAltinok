@@ -8,9 +8,9 @@ namespace OgrenciBilgiSistemi
 {
     internal abstract class Akademisyen
     {
-        private string isim;
-        private string soyIsim;
-        private string brans;
+        string isim;
+        string soyIsim;
+        string brans;
 
         public string Isim { get => isim; set => isim = value; }
         public string SoyIsim { get => soyIsim; set => soyIsim = value; }
