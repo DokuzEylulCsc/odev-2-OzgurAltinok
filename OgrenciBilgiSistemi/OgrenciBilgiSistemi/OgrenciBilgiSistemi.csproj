@@ -48,10 +48,12 @@
   <ItemGroup>
     <Compile Include="Asistan.cs" />
     <Compile Include="Bolum.cs" />
+    <Compile Include="Iterator.cs" />
     <Compile Include="Ders.cs" />
     <Compile Include="DoktoraOgrenci.cs" />
     <Compile Include="Fakulte.cs" />
     <Compile Include="LisansOgrenci.cs" />
+    <Compile Include="ListIterator.cs" />
     <Compile Include="Ogrenci.cs" />
     <Compile Include="Akademisyen.cs" />
     <Compile Include="OgretimElemani.cs" />

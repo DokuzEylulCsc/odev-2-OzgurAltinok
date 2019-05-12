@@ -40,11 +40,8 @@ namespace OgrenciBilgiSistemi
 
         internal void OgretimElemaniGuncelle(OgretimElemani hoca)
         {
-            //Object serialization&deserialization yapildi. Newtonsoft framework'u kullanildi
-            // Referans: https://www.newtonsoft.com/json/help/html/SerializingJSON.htm#JsonConvert
-
-            string json = JsonConvert.SerializeObject(hoca);
-            OgretimElemani = JsonConvert.DeserializeObject<OgretimElemani>(json);
+            string json = Serialize(hoca);
+            OgretimElemani = Deserialize(json);
         }
 
         internal void OgrenciEkle(Ogrenci ogrenci)
@@ -57,20 +54,51 @@ namespace OgrenciBilgiSistemi
             Ogrenciler.Remove(ogrenci);
         }
 
+        //Iterator interface'inden OgrenciListesini gezmek icin ListIterator nesnesi olusturdum.
+        internal Iterator GetIterator()
+        {
+            return new ListIterator(this.Ogrenciler);
+        }
+
+        //Iterator design pattern'i ile tum listeyi gezdim.
+        internal void DerseKayitliOgrencileriListele()
+        {
+            Iterator it = this.GetIterator();
+            //OgrenciListesi'nde her eleman icin saginda eleman varsa devam et
+            while (it.hasNext() == true)
+            {
+                string json = Serialize(it.next());
+                Console.WriteLine(CreatePrettyJSON(json));
+            }
+        }
+
+        //Object serialization&deserialization yapildi. Newtonsoft framework'u kullanildi
+        // Referans: https://www.newtonsoft.com/json/help/html/SerializingJSON.htm#JsonConvert
+        internal string Serialize(Object o)
+        {
+            return JsonConvert.SerializeObject(o);
+        }
+
+        internal OgretimElemani Deserialize(string serialized)
+        {
+            return JsonConvert.DeserializeObject<OgretimElemani>(serialized);
+        }
+
+        //JSON'u daha temiz yazmak icin kullanildi
+        //Referans: https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JToken.htm
+        //serialize ettigin objenin Json halini guzellestir (prettyJSON)
+        internal string CreatePrettyJSON(string json)
+        {
+            return JToken.Parse(json).ToString(Formatting.Indented);
+        }
+
         internal void JsonKaydet()
         {
             //serialize et
-            string json = JsonConvert.SerializeObject(this);
-
-            //JSON'u daha temiz yazmak icin kullanildi
-            //Referans: https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JToken.htm
-
-            //serialize ettigin objenin Json halini guzel yazdir (prettyJSON)
-            json = JToken.Parse(json).ToString(Formatting.Indented);
+            string json = Serialize(this);
 
             //prettyJSON'u yaz. #ornegin: matematik(2016-2017).json
-            File.WriteAllText(@"d:\" + this.DersIsim + "(" + this.DersDonemi + ")" + ".json", json);
-            //Console.WriteLine(this.Ogrenciler.ElementAt(0).Isim);
+            File.WriteAllText(@"d:\" + this.DersIsim + "(" + this.DersDonemi + ")" + ".json", CreatePrettyJSON(json));
         }
     }
 }

@@ -23,7 +23,12 @@ namespace OgrenciBilgiSistemi
             LisansOgrenci ogrenci = new LisansOgrenci("mehmet");
             ders.OgrenciEkle(ogrenci);
             ders.OgrenciEkle(new DoktoraOgrenci("isil"));
+            ders.OgrenciEkle(new LisansOgrenci("ekrem"));
+            ders.OgrenciEkle(new LisansOgrenci("kerem"));
 
+
+            //Console.WriteLine(ders.OgretimElemani.Isim);
+            //ders.DerseKayitliOgrencileriListele();
             ders.JsonKaydet();
 
             Console.ReadKey();
