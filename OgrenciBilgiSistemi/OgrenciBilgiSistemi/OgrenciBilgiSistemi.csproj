@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E470D656-FF91-4FFC-A099-EA32F0A8EAF5}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>OgrenciBilgiSistemi</RootNamespace>
     <AssemblyName>OgrenciBilgiSistemi</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -32,12 +32,17 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +53,24 @@
   <ItemGroup>
     <Compile Include="Asistan.cs" />
     <Compile Include="Bolum.cs" />
+    <Compile Include="BolumEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BolumEkrani.Designer.cs">
+      <DependentUpon>BolumEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DersEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DersEkrani.Designer.cs">
+      <DependentUpon>DersEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FakulteEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FakulteEkrani.Designer.cs">
+      <DependentUpon>FakulteEkrani.cs</DependentUpon>
+    </Compile>
     <Compile Include="Iterator.cs" />
     <Compile Include="Ders.cs" />
     <Compile Include="DoktoraOgrenci.cs" />
@@ -61,11 +84,31 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sube.cs" />
     <Compile Include="Universite.cs" />
+    <Compile Include="UniversiteEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UniversiteEkrani.Designer.cs">
+      <DependentUpon>UniversiteEkrani.cs</DependentUpon>
+    </Compile>
     <Compile Include="YuksekLisansOgrenci.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BolumEkrani.resx">
+      <DependentUpon>BolumEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DersEkrani.resx">
+      <DependentUpon>DersEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FakulteEkrani.resx">
+      <DependentUpon>FakulteEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UniversiteEkrani.resx">
+      <DependentUpon>UniversiteEkrani.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

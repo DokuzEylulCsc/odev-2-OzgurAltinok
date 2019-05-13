@@ -25,6 +25,11 @@ namespace OgrenciBilgiSistemi
             Isim = bolumIsim;
         }
 
+        internal Bolum()
+        {
+
+        }
+
         internal void OgrenciyiBolumeKayitEt(Ogrenci ogrenci)
         {
             Ogrenciler.Add(ogrenci);

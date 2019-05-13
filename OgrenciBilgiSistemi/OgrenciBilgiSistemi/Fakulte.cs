@@ -13,7 +13,7 @@ namespace OgrenciBilgiSistemi
         List<Sube> subeler = new List<Sube>();
         List<Ogrenci> ogrenciler = new List<Ogrenci>();
         List<Bolum> bolumler = new List<Bolum>();
-        
+
         public string Isim { get => isim; set => isim = value; }
         public List<Ders> Dersler { get => dersler; set => dersler = value; }
         public List<Sube> Subeler { get => subeler; set => subeler = value; }
@@ -23,6 +23,11 @@ namespace OgrenciBilgiSistemi
         internal Fakulte(string fakulteIsim)
         {
             Isim = fakulteIsim;
+        }
+
+        internal Fakulte()
+        {
+
         }
 
         internal void BolumEkle(Bolum bolum)

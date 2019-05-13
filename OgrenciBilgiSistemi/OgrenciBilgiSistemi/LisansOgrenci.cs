@@ -8,9 +8,13 @@ namespace OgrenciBilgiSistemi
 {
     internal class LisansOgrenci : Ogrenci
     {
-        internal LisansOgrenci(string isim)
+        internal LisansOgrenci(string isim, string soyisim, string bolum, int sinif, char sube)
         {
             Isim = isim;
+            SoyIsim = soyisim;
+            OgrBolum = bolum;
+            Sinif = sinif;
+            Sube = sube;
             OgrenimSeviyesi = this.GetType().Name;
         }
     }

@@ -33,6 +33,11 @@ namespace OgrenciBilgiSistemi
             DersDonemi = donem;
         }
 
+        internal Ders()
+        {
+
+        }
+
         internal void OgretimElemaniAta(OgretimElemani hoca)
         {
             OgretimElemani = hoca;
@@ -42,6 +47,17 @@ namespace OgrenciBilgiSistemi
         {
             string json = Serialize(hoca);
             OgretimElemani = Deserialize(json);
+        }
+
+        internal void AsistanAta(Asistan assist)
+        {
+            AsistanHoca = assist;
+        }
+
+        internal void asistanGuncelle(Asistan assist)
+        {
+            string json = Serialize(assist);
+            AsistanHoca = DeserializeAssist(json);
         }
 
         internal void OgrenciEkle(Ogrenci ogrenci)
@@ -82,6 +98,11 @@ namespace OgrenciBilgiSistemi
         internal OgretimElemani Deserialize(string serialized)
         {
             return JsonConvert.DeserializeObject<OgretimElemani>(serialized);
+        }
+
+        internal Asistan DeserializeAssist(string serialized)
+        {
+            return JsonConvert.DeserializeObject<Asistan>(serialized);
         }
 
         //JSON'u daha temiz yazmak icin kullanildi
