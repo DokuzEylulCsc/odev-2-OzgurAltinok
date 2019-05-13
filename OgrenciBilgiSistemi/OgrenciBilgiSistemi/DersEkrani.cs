@@ -23,7 +23,7 @@ namespace OgrenciBilgiSistemi
             DersName.Text = isim.ToUpper() + " DERSİ";
         }
 
-        
+
 
         internal Ders Ders { get => ders; set => ders = value; }
 

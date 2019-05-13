@@ -41,7 +41,7 @@ namespace OgrenciBilgiSistemi
             NewFakulte.BolumEkle(NewBolum);
 
             //Listbox'a yazdir.
-            for(int i=0;i<NewFakulte.Bolumler.Count;i++)
+            for (int i = 0; i < NewFakulte.Bolumler.Count; i++)
             {
                 bolumListesi.Items.Add(NewFakulte.Bolumler[i].Isim);
             }

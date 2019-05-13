@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.DersName = new System.Windows.Forms.Label();
-            this.DersListesi = new System.Windows.Forms.ListBox();
-            this.DerslerLabel = new System.Windows.Forms.Label();
-            this.OgrenciListesi = new System.Windows.Forms.ListBox();
+            this.OgrenciListesiSon = new System.Windows.Forms.ListBox();
             this.OgrencilerLabel = new System.Windows.Forms.Label();
             this.HocaListesi = new System.Windows.Forms.ListBox();
             this.HocalarLabel = new System.Windows.Forms.Label();
@@ -50,32 +48,13 @@
             this.DersName.TabIndex = 3;
             this.DersName.Text = "dersIsmi";
             // 
-            // DersListesi
+            // OgrenciListesiSon
             // 
-            this.DersListesi.FormattingEnabled = true;
-            this.DersListesi.Location = new System.Drawing.Point(448, 100);
-            this.DersListesi.Name = "DersListesi";
-            this.DersListesi.Size = new System.Drawing.Size(188, 69);
-            this.DersListesi.TabIndex = 17;
-            // 
-            // DerslerLabel
-            // 
-            this.DerslerLabel.AutoSize = true;
-            this.DerslerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.DerslerLabel.Location = new System.Drawing.Point(446, 76);
-            this.DerslerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DerslerLabel.Name = "DerslerLabel";
-            this.DerslerLabel.Size = new System.Drawing.Size(60, 20);
-            this.DerslerLabel.TabIndex = 16;
-            this.DerslerLabel.Text = "Dersler";
-            // 
-            // OgrenciListesi
-            // 
-            this.OgrenciListesi.FormattingEnabled = true;
-            this.OgrenciListesi.Location = new System.Drawing.Point(235, 100);
-            this.OgrenciListesi.Name = "OgrenciListesi";
-            this.OgrenciListesi.Size = new System.Drawing.Size(188, 69);
-            this.OgrenciListesi.TabIndex = 15;
+            this.OgrenciListesiSon.FormattingEnabled = true;
+            this.OgrenciListesiSon.Location = new System.Drawing.Point(235, 100);
+            this.OgrenciListesiSon.Name = "OgrenciListesiSon";
+            this.OgrenciListesiSon.Size = new System.Drawing.Size(188, 69);
+            this.OgrenciListesiSon.TabIndex = 15;
             // 
             // OgrencilerLabel
             // 
@@ -123,9 +102,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
             this.Controls.Add(this.JsonKaydetButton);
-            this.Controls.Add(this.DersListesi);
-            this.Controls.Add(this.DerslerLabel);
-            this.Controls.Add(this.OgrenciListesi);
+            this.Controls.Add(this.OgrenciListesiSon);
             this.Controls.Add(this.OgrencilerLabel);
             this.Controls.Add(this.HocaListesi);
             this.Controls.Add(this.HocalarLabel);
@@ -140,9 +117,7 @@
         #endregion
 
         private System.Windows.Forms.Label DersName;
-        private System.Windows.Forms.ListBox DersListesi;
-        private System.Windows.Forms.Label DerslerLabel;
-        private System.Windows.Forms.ListBox OgrenciListesi;
+        private System.Windows.Forms.ListBox OgrenciListesiSon;
         private System.Windows.Forms.Label OgrencilerLabel;
         private System.Windows.Forms.ListBox HocaListesi;
         private System.Windows.Forms.Label HocalarLabel;
